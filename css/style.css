@@ -14,6 +14,10 @@ body {
   font-family: 'Mulish', sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -373,6 +377,10 @@ body {
   font-family: 'Mulish', sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 .navbar {
   background-color: #fff;
 }
@@ -394,8 +402,17 @@ body {
   padding-top: 40px;
 }
 
+.navbar-top__menu-button {
+  display: none;
+}
+
 .navbar-bottom {
   background-color: #0A223D;
+}
+
+.navbar__search {
+  margin-right: auto;
+  margin-left: 108px;
 }
 
 .navbar-menu {
@@ -502,28 +519,72 @@ body {
   .container {
     max-width: 700px;
   }
+  .logo {
+    width: 132px;
+  }
   .navbar-top {
     padding-bottom: 30px;
     padding-top: 30px;
   }
-  .navbar-menu {
-    padding-top: 22px;
-    padding-bottom: 23px;
-  }
-  .search {
-    margin-left: auto;
+  .navbar__search {
+    margin-left: 47px;
+    margin-right: auto;
     max-width: 340px;
   }
-  .search-menu__link {
+  .navbar-menu {
+    width: 673px;
+    margin: auto;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  .navbar-menu__link {
     font-size: 12px;
     line-height: 15px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
-    max-width: 700px;
+    max-width: 576px;
     width: 92%;
+  }
+  .navbar-bottom, .navbar__search, .navbar__user {
+    display: none;
+  }
+  .menu-button {
+    height: 13px;
+    width: 16px;
+    border: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  .menu-button__line {
+    width: 16px;
+    height: 1px;
+    background-color: #333333;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    width: 99px;
   }
 }
 /*# sourceMappingURL=style.css.map */
