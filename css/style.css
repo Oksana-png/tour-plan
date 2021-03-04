@@ -529,7 +529,6 @@ img {
   .navbar__search {
     margin-left: 47px;
     margin-right: auto;
-    max-width: 340px;
   }
   .navbar-menu {
     width: 673px;
@@ -540,6 +539,9 @@ img {
   .navbar-menu__link {
     font-size: 12px;
     line-height: 15px;
+  }
+  .search__input {
+    max-width: 340px;
   }
 }
 
@@ -554,6 +556,7 @@ img {
   .menu-button {
     height: 13px;
     width: 16px;
+    padding: 0;
     border: none;
     display: -webkit-box;
     display: -webkit-flex;
