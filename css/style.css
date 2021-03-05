@@ -19,6 +19,10 @@ img {
   max-width: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -383,6 +387,10 @@ img {
   max-width: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 .navbar {
   background-color: #fff;
 }
@@ -561,7 +569,7 @@ img {
 }
 
 .hotel {
-  padding-top: 23px;
+  padding-top: 13px;
   padding-bottom: 70px;
 }
 
@@ -578,10 +586,6 @@ img {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.hotel-info__stars {
-  height: 8px;
 }
 
 .hotel-info__offer {
@@ -629,6 +633,12 @@ img {
           flex-basis: 100%;
 }
 
+.stars__elem {
+  width: 8px;
+  height: 8px;
+  margin-left: -2px;
+}
+
 .offer {
   font-size: 10px;
   line-height: 13px;
@@ -657,6 +667,10 @@ img {
 .rating__counter {
   font-size: 14px;
   line-height: 18px;
+}
+
+.rating__small {
+  font-size: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -748,6 +762,12 @@ img {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .hotel-info__stars {
+    margin-right: 16px;
+  }
+  .hotel-info__name {
+    margin-top: 10px;
   }
   .hotel-info__text {
     width: 100%;

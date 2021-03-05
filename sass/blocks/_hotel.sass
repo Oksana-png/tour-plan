@@ -1,12 +1,10 @@
 .hotel
-  padding-top: 23px
+  padding-top: 13px
   padding-bottom: 70px
   &-info
     display: flex
     align-items: center
     justify-content: space-between
-    &__stars
-      height: 8px
     &__offer
       margin-top: 4px
       margin-left: 14px
@@ -28,6 +26,10 @@
     line-height: 15px
 .stars
   flex-basis: 100%
+  &__elem
+    width: 8px
+    height: 8px
+    margin-left: -2px
 .offer
   font-size: 10px
   line-height: 13px
@@ -48,3 +50,5 @@
   &__counter
     font-size: 14px
     line-height: 18px
+  &__small
+    font-size: 10px
