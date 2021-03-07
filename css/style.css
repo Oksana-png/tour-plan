@@ -428,7 +428,9 @@ button {
 .navbar-menu {
   list-style-type: none;
   margin: 0;
-  padding: 31px 0;
+  padding: 0;
+  padding-top: 31px;
+  padding-bottom: 30px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -534,6 +536,7 @@ button {
 }
 
 .user__name {
+  margin-top: 1px;
   font-size: 14px;
   line-height: 18px;
   color: #333333;
@@ -560,7 +563,7 @@ button {
 
 .breadcrumb-list__item:not(:last-child)::after {
   content: '/';
-  margin-right: 4px;
+  margin-right: 3px;
 }
 
 .breadcrumb-list__link {
@@ -569,7 +572,7 @@ button {
 }
 
 .hotel {
-  padding-top: 13px;
+  padding-top: 24px;
   padding-bottom: 70px;
 }
 
@@ -590,7 +593,7 @@ button {
 
 .hotel-info__offer {
   margin-top: 4px;
-  margin-left: 14px;
+  margin-left: 15px;
 }
 
 .hotel-info__name {
@@ -628,15 +631,17 @@ button {
 }
 
 .stars {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
 }
 
 .stars__elem {
-  width: 8px;
-  height: 8px;
-  margin-left: -2px;
+  margin-right: 2px;
 }
 
 .offer {
@@ -798,9 +803,16 @@ button {
     padding-top: 25px;
     padding-bottom: 27px;
   }
+  .navbar-top__menu-button {
+    margin-top: 5px;
+  }
   .hotel {
     padding-top: 5px;
     padding-bottom: 50px;
+  }
+  .breadcrumb-list {
+    padding-top: 21px;
+    padding-bottom: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */
