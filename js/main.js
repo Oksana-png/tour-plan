@@ -6,18 +6,22 @@ const swiper = new Swiper('.swiper-container', {
     nextEl: '.slider-button--next',
     prevEl: '.slider-button--prev',
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
   autoplay: {
     delay: 6000,
   },
   
 });
 
-addEventListener('keydown', function (event) {
-  console.log(event)
-  if(event.key === 'ArrowRight'){
-    swiper.slideNext();
-  }
-  else if (event.key === 'ArrowLeft'){
-    swiper.slidePrev()
-  }
-});
+// addEventListener('keydown', function (event) {
+//   console.log(event)
+//   if(event.key === 'ArrowRight'){
+//     swiper.slideNext();
+//   }
+//   else if (event.key === 'ArrowLeft'){
+//     swiper.slidePrev()
+//   }
+// });
