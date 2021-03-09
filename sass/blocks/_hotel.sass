@@ -29,7 +29,7 @@
     display: flex
     justify-content: space-between
   &-right
-    
+
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -75,12 +75,14 @@
       top: 0
       background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
   &-slide
-    background-size: contain contain
+    &__img
+      width: 100%
+      // Полюбому надо. Делает размеры слайдов нормальными
 
 .slider
   width: 728px
   height: 450px
-    position: relative
+  position: relative
   &-button
     z-index: 99
     top: 50%
@@ -108,7 +110,7 @@
   border-radius: 8px
   width: 350px
   min-height: 210px
-  padding: 29px 29px 26px 26px
+  padding: 28px 29px 23px 26px
   background-color: $dark
   color: $ligth
   &-info
@@ -127,6 +129,7 @@
     font-weight: 800
     font-size: 24px
     line-height: 33px
+    margin-bottom: -4px
   &__per-room
     font-style: normal
     font-weight: normal
@@ -163,7 +166,7 @@
     color: inherit
     font-weight: 600
     font-size: 18px
-    line-height: 25px 
+    line-height: 25px
   &__num
     margin-left: 8px
   &__button
@@ -182,4 +185,4 @@
   width: 347px
   height: 213px
   border-radius: 10px
-  overflow: h
+  overflow: hidden
