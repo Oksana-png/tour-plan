@@ -1123,8 +1123,14 @@ button:active, button:focus {
     padding-top: 21px;
     padding-bottom: 14px;
   }
+  .hotel-right {
+    min-height: 402px;
+  }
   .hotel__slider {
     height: 179px;
+  }
+  .map {
+    height: 173px;
   }
 }
 /*# sourceMappingURL=style.css.map */
