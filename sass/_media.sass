@@ -1,10 +1,10 @@
 @media (max-width: 1200px)
   .container
     max-width: 960px
-  .slider
+  .hotel-slider
     width: 590px
-  .swiper
-    &-slide
+  .hotel
+    &-slider
       &__img
         height: 100%
         object-fit: cover // картинки в слайдере стали нормальными
@@ -46,7 +46,7 @@
     width: 340px
   .map
     width: 340px
-  .slider
+  .hotel-slider
     width: 100%
   .newsletter
     padding-top: 92px
@@ -79,6 +79,7 @@
   .stars
     flex-basis: auto
   .hotel
+    padding-bottom: 40px
     &-name
       flex-basis: 100%
     &-wrapper
@@ -95,13 +96,11 @@
         margin-left: 0
       &__rating
         display: none
-  .slider
-    height: 350px
-  .hotel
-    padding-bottom: 40px
     &-right
       flex-direction: column
       min-height: 450px
+    &-slider
+      height: 350px
   .booking
     width: 100%
   .map
@@ -120,9 +119,9 @@
 @media ( max-width: 576px )
   .logo
     width: 99px
-  .slider
+  .hotel-slider
     height: 250px
-    &-button
+    &__button
       padding: 3px 6px
       margin-top: -6px
       &--prev
