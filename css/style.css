@@ -940,7 +940,8 @@ button:active, button:focus {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
-  background-position: center;
+  background-position: center 0;
+  background: transparent;
 }
 
 .newsletter:before {

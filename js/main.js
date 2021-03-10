@@ -24,6 +24,12 @@ const reviewsSlider = new Swiper('.reviews-slider', {
     prevEl: '.reviews-slider__button--prev',
   }
 });
+
+// Параллакс эффект
+
+// $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jfif'}, {dataSpeed: 0.0});
+
+
 // addEventListener('keydown', function (event) {
 //   console.log(event)
 //   if(event.key === 'ArrowRight'){
