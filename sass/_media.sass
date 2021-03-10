@@ -7,7 +7,8 @@
     &-slide
       &__img
         height: 100%
-        object-fit: cover // картинки в слайдере стали нормальными в адаптиве
+        object-fit: cover // картинки в слайдере стали нормальными
+
 @media (max-width: 992px )
   .container
     max-width: 700px
@@ -32,10 +33,13 @@
     &__input
       max-width: 340px
   .hotel
+    padding-bottom: 57px
     &-grid
       flex-direction: column
     &__slider
       margin-bottom: 30px
+    &-right
+      flex-direction: row
   .booking
     padding-right: 22px
     padding-left: 23px
@@ -44,8 +48,11 @@
     width: 340px
   .slider
     width: 100%
-  .hotel-right
-    flex-direction: row
+  .newsletter
+    padding-top: 92px
+    padding-bottom: 93px
+    &-wrapper
+      width: 700px
 @media (max-width: 767px )
   .container
     max-width: 576px
@@ -91,6 +98,7 @@
   .slider
     height: 350px
   .hotel
+    padding-bottom: 40px
     &-right
       flex-direction: column
       min-height: 450px
@@ -98,17 +106,51 @@
     width: 100%
   .map
     width: 100%
+  .newsletter
+    padding: 76px 0 83px 0
+    &__title
+      margin-bottom: 37px
+    &-wrapper
+      max-width: 576px
+      width: 92%
+      flex-direction: column
+      align-items: flex-start
+  .subscribe
+    width: 100%
 @media ( max-width: 576px )
   .logo
     width: 99px
   .slider
     height: 250px
+    &-button
+      padding: 3px 6px
+      margin-top: -6px
+      &--prev
+        width: 4px
+        height: 7px
+        margin-left: 9px
+      &--next
+        width: 4px
+        height: 7px
+        margin-right: 9px
   .swiper-slide
     width: 100%
   .hotel
     &__slider
       margin-bottom: 20px
-
+  .newsletter
+    &-title
+      font-weight: 300
+      font-size: 20px
+      line-height: 25px
+      &__strong
+        margin-top: 5px
+        font-weight: 600
+        font-size: 30px
+        line-height: 38px
+  .subscribe
+    &__input
+      padding-left: 20px
 @media ( max-width: 400px )
   .container
     width: 280px
@@ -120,17 +162,16 @@
         margin-top: 5px
   .hotel
     padding-top: 5px
-    padding-bottom: 50px
+    padding-bottom: 38px
     &-grid
       margin-top: 40px
-  .breadcrumb
-    &-list
-      padding-top: 21px
-      padding-bottom: 14px
-  .hotel
     &-right
       min-height: 402px
     &__slider
       height: 179px
+  .breadcrumb
+    &-list
+      padding-top: 21px
+      padding-bottom: 14px
   .map
-    height: 173px
+    height: 172px

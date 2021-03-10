@@ -922,6 +922,117 @@ button:active, button:focus {
   overflow: hidden;
 }
 
+.newsletter {
+  position: relative;
+  padding-top: 98px;
+  padding-bottom: 87px;
+  background-image: url(../../img/newsletter-bg.jfif);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+}
+
+.newsletter:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 34, 61, 0.8);
+}
+
+.newsletter-wrapper {
+  position: relative;
+  width: 731px;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.newsletter-title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.newsletter-title__strong {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
+}
+
+.subscribe {
+  position: relative;
+  width: 350px;
+  height: 55px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  overflow: hidden;
+}
+
+.subscribe__input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 19px 75px 18px 33px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+}
+
+.subscribe__input::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.subscribe__input::-moz-placeholder {
+  color: #BDBDBD;
+}
+
+.subscribe__input:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.subscribe__input::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.subscribe__input::placeholder {
+  color: #BDBDBD;
+}
+
+.subscribe__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 65px;
+  height: 100%;
+  border: none;
+  background: #EC1F46;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -964,6 +1075,9 @@ button:active, button:focus {
   .search__input {
     max-width: 340px;
   }
+  .hotel {
+    padding-bottom: 57px;
+  }
   .hotel-grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -973,6 +1087,13 @@ button:active, button:focus {
   }
   .hotel__slider {
     margin-bottom: 30px;
+  }
+  .hotel-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .booking {
     padding-right: 22px;
@@ -985,12 +1106,12 @@ button:active, button:focus {
   .slider {
     width: 100%;
   }
-  .hotel-right {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .newsletter {
+    padding-top: 92px;
+    padding-bottom: 93px;
+  }
+  .newsletter-wrapper {
+    width: 700px;
   }
 }
 
@@ -1070,6 +1191,9 @@ button:active, button:focus {
   .slider {
     height: 350px;
   }
+  .hotel {
+    padding-bottom: 40px;
+  }
   .hotel-right {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1084,6 +1208,28 @@ button:active, button:focus {
   .map {
     width: 100%;
   }
+  .newsletter {
+    padding: 76px 0 83px 0;
+  }
+  .newsletter__title {
+    margin-bottom: 37px;
+  }
+  .newsletter-wrapper {
+    max-width: 576px;
+    width: 92%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .subscribe {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1093,11 +1239,39 @@ button:active, button:focus {
   .slider {
     height: 250px;
   }
+  .slider-button {
+    padding: 3px 6px;
+    margin-top: -6px;
+  }
+  .slider-button--prev {
+    width: 4px;
+    height: 7px;
+    margin-left: 9px;
+  }
+  .slider-button--next {
+    width: 4px;
+    height: 7px;
+    margin-right: 9px;
+  }
   .swiper-slide {
     width: 100%;
   }
   .hotel__slider {
     margin-bottom: 20px;
+  }
+  .newsletter-title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .newsletter-title__strong {
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .subscribe__input {
+    padding-left: 20px;
   }
 }
 
@@ -1114,14 +1288,10 @@ button:active, button:focus {
   }
   .hotel {
     padding-top: 5px;
-    padding-bottom: 50px;
+    padding-bottom: 38px;
   }
   .hotel-grid {
     margin-top: 40px;
-  }
-  .breadcrumb-list {
-    padding-top: 21px;
-    padding-bottom: 14px;
   }
   .hotel-right {
     min-height: 402px;
@@ -1129,8 +1299,12 @@ button:active, button:focus {
   .hotel__slider {
     height: 179px;
   }
+  .breadcrumb-list {
+    padding-top: 21px;
+    padding-bottom: 14px;
+  }
   .map {
-    height: 173px;
+    height: 172px;
   }
 }
 /*# sourceMappingURL=style.css.map */
