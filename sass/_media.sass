@@ -64,6 +64,7 @@
       max-width: 699px
       &__item
         max-width: 579px
+        max-height: 320px
         padding: 0 60px 30px 64px
         &::after, &::before
           display: none
@@ -136,27 +137,19 @@
     /////////////////
   .reviews
     padding-bottom: 50px
+    padding-left: 10px
+    padding-right: 10px
     &__title
-      width: 245px
-      margin: auto
       margin-bottom: 42px
       font-size: 18px
       line-height: 23px
     &-slider
       max-width: 699px
       &__item
-        width: 281px
+        min-width: 281px
+        max-height: 299px
         padding: 0 29px 36px 33px
-      &__button
-        top: 30px
-        &--prev
-          left: 50%
-          transform: translate(-50%, 0)
-          margin-left: -90px
-        &--next
-          right: 50%
-          transform: translate(50%, 0)
-          margin-right: -90px
+
 @media ( max-width: 576px )
   .logo
     width: 99px
@@ -191,6 +184,20 @@
   .subscribe
     &__input
       padding-left: 20px
+  .reviews
+    &-slider
+      &__item
+        max-height: 438px
+      &__button
+        top: 30px
+        &--prev
+          left: 50%
+          transform: translate(-50%, 0)
+          margin-left: -90px
+        &--next
+          right: 50%
+          transform: translate(50%, 0)
+          margin-right: -90px
 @media ( max-width: 400px )
   .container
     width: 280px
@@ -215,3 +222,13 @@
       padding-bottom: 14px
   .map
     height: 172px
+  .reviews
+    &__title
+      width: 245px
+      margin: auto
+      margin-bottom: 42px
+      font-size: 18px
+      line-height: 23px
+    &-slider
+      &__text
+        text-align: left
