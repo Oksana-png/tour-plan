@@ -1092,7 +1092,7 @@ button:active, button:focus {
 
 .reviews-slider__item:before {
   content: '';
-  background-image: url(../../img/quote-left.svg);
+  background-image: url(../img/quote-left.svg);
   background-repeat: no-repeat;
   position: absolute;
   width: 70px;
@@ -1103,7 +1103,7 @@ button:active, button:focus {
 
 .reviews-slider__item:after {
   content: '';
-  background-image: url(../../img/quote-right.svg);
+  background-image: url(../img/quote-right.svg);
   background-repeat: no-repeat;
   position: absolute;
   width: 70px;
@@ -1194,12 +1194,12 @@ button:active, button:focus {
 }
 
 .reviews-slider__button--prev {
-  background-image: url(../../img/arrow-prev-secondary.svg);
+  background-image: url(../img/arrow-prev-secondary.svg);
   left: 0;
 }
 
 .reviews-slider__button--next {
-  background-image: url(../../img/arrow-next-secondary.svg);
+  background-image: url(../img/arrow-next-secondary.svg);
   right: 0;
 }
 
@@ -1298,9 +1298,6 @@ button:active, button:focus {
     max-width: 579px;
     max-height: 320px;
     padding: 0 60px 30px 64px;
-  }
-  .reviews-slider__item::after, .reviews-slider__item::before {
-    display: none;
   }
   .reviews-slider__text {
     padding: 0;
@@ -1440,6 +1437,9 @@ button:active, button:focus {
     max-height: 299px;
     padding: 0 29px 36px 33px;
   }
+  .reviews-slider__item::after, .reviews-slider__item::before {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1450,21 +1450,17 @@ button:active, button:focus {
     height: 250px;
   }
   .hotel-slider__button {
-    padding: 3px 6px;
+    width: 12px;
+    height: 12px;
+    -webkit-background-size: 4px 7px;
+            background-size: 4px 7px;
     margin-top: -6px;
   }
   .hotel-slider__button--prev {
-    width: 4px;
-    height: 7px;
     margin-left: 9px;
   }
   .hotel-slider__button--next {
-    width: 4px;
-    height: 7px;
     margin-right: 9px;
-  }
-  .swiper-slide {
-    width: 100%;
   }
   .hotel__slider {
     margin-bottom: 20px;
@@ -1474,7 +1470,10 @@ button:active, button:focus {
     font-size: 20px;
     line-height: 25px;
   }
-  .newsletter-title__strong {
+  .newsletter-wrapper {
+    max-width: 576px;
+  }
+  .newsletter-wrapper__strong {
     margin-top: 5px;
     font-weight: 600;
     font-size: 30px;
@@ -1545,6 +1544,9 @@ button:active, button:focus {
   }
   .reviews-slider__text {
     text-align: left;
+  }
+  .newsletter-wrapper {
+    max-width: 280px;
   }
 }
 /*# sourceMappingURL=style.css.map */

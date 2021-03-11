@@ -66,8 +66,7 @@
         max-width: 579px
         max-height: 320px
         padding: 0 60px 30px 64px
-        &::after, &::before
-          display: none
+
       &__text
         padding: 0
 
@@ -149,26 +148,24 @@
         min-width: 281px
         max-height: 299px
         padding: 0 29px 36px 33px
+        &::after, &::before
+          display: none
 
 @media ( max-width: 576px )
   .logo
     width: 99px
-  .hotel-slider
-    height: 250px
-    &__button
-      padding: 3px 6px
-      margin-top: -6px
-      &--prev
-        width: 4px
-        height: 7px
-        margin-left: 9px
-      &--next
-        width: 4px
-        height: 7px
-        margin-right: 9px
-  .swiper-slide
-    width: 100%
   .hotel
+    &-slider
+      height: 250px
+      &__button
+        width: 12px
+        height: 12px
+        background-size: 4px 7px
+        margin-top: -6px
+        &--prev
+          margin-left: 9px
+        &--next
+          margin-right: 9px
     &__slider
       margin-bottom: 20px
   .newsletter
@@ -176,6 +173,8 @@
       font-weight: 300
       font-size: 20px
       line-height: 25px
+    &-wrapper
+      max-width: 576px
       &__strong
         margin-top: 5px
         font-weight: 600
@@ -232,3 +231,6 @@
     &-slider
       &__text
         text-align: left
+  .newsletter
+    &-wrapper
+      max-width: 280px
