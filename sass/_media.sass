@@ -8,6 +8,9 @@
       &__img
         height: 100%
         object-fit: cover // картинки в слайдере стали нормальными
+  .card
+    width: 230px
+    height: 230px
 
 @media (max-width: 992px )
   .container
@@ -66,10 +69,20 @@
         max-width: 579px
         max-height: 320px
         padding: 0 60px 30px 64px
-
       &__text
         padding: 0
-
+      &__button
+        top: 48%
+  .activities
+    padding-top: 40px
+    padding-bottom: 50px
+    &-wrapper
+      flex-wrap: wrap
+    &__card
+      margin-bottom: 20px
+  .card
+    width: 339px
+    height: 255px
 @media (max-width: 767px )
   .container
     max-width: 576px
@@ -150,7 +163,18 @@
         padding: 0 29px 36px 33px
         &::after, &::before
           display: none
-
+      &__button
+        top: 30px
+        &--prev
+          left: 50%
+          transform: translate(-50%, 0)
+          margin-left: -90px
+        &--next
+          right: 50%
+          transform: translate(50%, 0)
+          margin-right: -90px
+  .card
+    width: 100%
 @media ( max-width: 576px )
   .logo
     width: 99px
@@ -183,20 +207,7 @@
   .subscribe
     &__input
       padding-left: 20px
-  .reviews
-    &-slider
-      &__item
-        max-height: 438px
-      &__button
-        top: 30px
-        &--prev
-          left: 50%
-          transform: translate(-50%, 0)
-          margin-left: -90px
-        &--next
-          right: 50%
-          transform: translate(50%, 0)
-          margin-right: -90px
+
 @media ( max-width: 400px )
   .container
     width: 280px
@@ -222,6 +233,7 @@
   .map
     height: 172px
   .reviews
+    padding-bottom: 12px
     &__title
       width: 245px
       margin: auto
@@ -231,6 +243,24 @@
     &-slider
       &__text
         text-align: left
+      &__item
+        max-height: 600px
   .newsletter
     &-wrapper
       max-width: 280px
+    &-title
+      font-size: 20px
+      line-height: 25px
+      &__strong
+        font-size: 30px
+        line-height: 38px
+        margin-top: 5px
+  .activities
+    padding-top: 40px
+    padding-bottom: 40px
+    &__title
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 36px
+  .card
+    width: 280px
