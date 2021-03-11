@@ -1092,7 +1092,7 @@ button:active, button:focus {
 
 .reviews-slider__item:before {
   content: '';
-  background-image: url(../img/quote-left.svg);
+  background-image: url("../img/quote-left.svg");
   background-repeat: no-repeat;
   position: absolute;
   width: 70px;
@@ -1103,7 +1103,7 @@ button:active, button:focus {
 
 .reviews-slider__item:after {
   content: '';
-  background-image: url(../img/quote-right.svg);
+  background-image: url("../img/quote-right.svg");
   background-repeat: no-repeat;
   position: absolute;
   width: 70px;
@@ -1194,12 +1194,12 @@ button:active, button:focus {
 }
 
 .reviews-slider__button--prev {
-  background-image: url(../img/arrow-prev-secondary.svg);
+  background-image: url("../img/arrow-prev-secondary.svg");
   left: 0;
 }
 
 .reviews-slider__button--next {
-  background-image: url(../img/arrow-next-secondary.svg);
+  background-image: url("../img/arrow-next-secondary.svg");
   right: 0;
 }
 
