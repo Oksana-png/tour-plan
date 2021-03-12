@@ -83,6 +83,26 @@
   .card
     width: 339px
     height: 255px
+  //<-------------------- other packages блок -------------->
+  .hotels
+    grid-gap: 20px
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr))
+    grid-template-rows: repeat(2, 430px)
+  .hotels
+    &-info
+      padding: 18px 21px 20px 32px
+    &-small
+      grid-template-rows: 200px 1fr
+      &__image
+        height: 200px
+    &__image
+      &_big
+        max-height: 430px
+    &__text
+      margin-bottom: 25px
+    &__desciption
+      &_big
+        margin-bottom: 23px
 @media (max-width: 767px )
   .container
     max-width: 576px
@@ -175,6 +195,51 @@
           margin-right: -90px
   .card
     width: 100%
+
+  .hotels
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    grid-gap: 15px
+    &__text
+      overflow-y: auto
+      max-height: 150px
+  .packages
+    &__title
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 50px
+@media ( max-width: 660px )
+  .hotels
+    grid-template-columns: repeat( 1, 1fr)
+    grid-template-rows: 515px
+    grid-row-gap: 20px
+    grid-column-gap: 0
+    &-big
+      grid-column-start: 1
+      grid-template-columns: 1fr
+      grid-template-rows: 200px 1fr
+
+    &-small
+      grid-template-rows: 270px 1fr
+      &__image
+        height: 270px
+    &__image
+      &_big
+        max-height: inherit
+      &-big
+        background-position: center
+        height: 200px
+    &-info
+      padding: 30px 21px 25px 28px
+    &__title
+      &_big
+        margin-bottom: 10px
+    &__text
+      overflow-y: auto
+      max-height: 70px
+      margin-bottom: 12px
+    &__desciption
+      &_big
+        margin-bottom: 8px
 @media ( max-width: 576px )
   .logo
     width: 99px
@@ -264,3 +329,7 @@
       margin-bottom: 36px
   .card
     width: 280px
+  .packages
+    &__title
+      font-size: 20px
+      line-height: 23px
