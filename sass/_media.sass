@@ -103,6 +103,45 @@
     &__desciption
       &_big
         margin-bottom: 23px
+  .footer
+    padding-top: 67px
+    &-wrapper
+      grid-template-columns: 200px 1fr 202px
+      grid-column-gap: 0
+      grid-row-gap: 44px
+    &__logo
+      margin-top: 0
+      height: 120px
+      width: 95px
+      grid-row: 1 / 2
+    &__social
+      &-network
+        margin-left: -15px
+        margin-top: 13px
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2 / 3
+      grid-column: 1 / 2
+    &__contact
+      &-details
+        margin-top: 18px
+        grid-row: 3
+        grid-column: span 4
+      &-form
+        margin-top: -5px
+        grid-column: span 3
+        grid-row: 4
+    &__form
+      width: 539px
+    &__information
+      margin: 0
+    &__icon
+      &-wrapper
+        min-width: 45px
+  .disclaimer
+    padding-top: 56px
 @media (max-width: 767px )
   .container
     max-width: 576px
@@ -240,6 +279,74 @@
     &__desciption
       &_big
         margin-bottom: 8px
+  .footer
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-row-gap: 30px
+    &__title
+      &_contacts
+        margin-top: 16px
+        margin-bottom: 15px
+      &_inline
+        margin-bottom: 20px
+        margin-right: 0
+      &_bt
+        margin-top: 12px
+    &__form
+      width: 280px
+    &__input
+      flex-basis: 100%
+    &__button
+      order: 1
+    &__info
+      flex-basis: 100%
+      margin-bottom: 15px
+    &__logo
+      grid-column: 1
+      grid-row: 1
+    &__social
+      &-network
+        margin-top: 0
+        margin-left: 0
+        grid-column: 1
+        grid-row: 2
+        display: block
+      &-links
+        max-width: 83px
+    &__additional
+      grid-column: 1
+      grid-row: 4
+    &__categories
+      grid-row: 5
+      grid-column: 1
+    &__legal
+      grid-column: 1
+      grid-row: 3
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+        margin-top: 0
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &__icon
+      &-wrapper
+        min-width: 29px
+    &__message
+      margin-bottom: 15px
+    &__disclaimer
+      display: block
+  .disclaimer
+    padding-top: 27px
+    &__wrapper
+      margin-bottom: 9px
+    &__icons
+      margin-left: 0
+    &__link
+      margin-right: 9px
+      &:last-child
+        margin-right: 0
 @media ( max-width: 576px )
   .logo
     width: 99px
