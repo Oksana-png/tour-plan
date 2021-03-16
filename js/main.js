@@ -10,9 +10,9 @@ const hotelSlider = new Swiper('.hotel-slider', {
     enabled: true,
     onlyInViewport: false,
   },
-  // autoplay: {
-  //   delay: 6000,
-  // },
+  autoplay: {
+    delay: 6000,
+  },
   
 });
 
@@ -23,6 +23,12 @@ const reviewsSlider = new Swiper('.reviews-slider', {
     nextEl: '.reviews-slider__button--next',
     prevEl: '.reviews-slider__button--prev',
   }
+});
+
+const buttonMenu = document.querySelector('.menu-button');
+
+buttonMenu.addEventListener('click', () => {
+  document.querySelector('.navbar-bottom').classList.toggle('navbar-bottom--visible');
 });
 
 // Параллакс эффект

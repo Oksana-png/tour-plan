@@ -14,7 +14,7 @@
     <title>Best tour plan - Hotel Booking</title>
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar navbar--modile--fixed">
       <div class="container">
         <div class="navbar-top">
           <a href="#" class="logo">
@@ -25,7 +25,10 @@
             />
           </a>
 
-          <form action="#" class="search navbar__search">
+          <form
+            action="#"
+            class="search navbar__search navbar__search--mobile--hidden"
+          >
             <input
               type="text"
               class="search__input"
@@ -36,7 +39,7 @@
             </button>
           </form>
 
-          <div class="user navbar__user">
+          <div class="user navbar__user navbar__user--mobile--hidden">
             <img
               src="img/avatar.jfif"
               alt="logo: Nathan"
@@ -55,6 +58,28 @@
         <div class="container">
           <nav>
             <ul class="navbar-menu">
+              <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+                <div class="user navbar__user">
+                  <img
+                    src="img/avatar.jfif"
+                    alt="logo: Nathan"
+                    class="user__avatar"
+                  />
+                  <span class="user__name">Nathan</span>
+                </div>
+              </li>
+              <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+                <form action="#" class="search navbar__search">
+                  <input
+                    type="text"
+                    class="search__input"
+                    placeholder="Search Location"
+                  />
+                  <button class="search__button">
+                    <img src="img/search.svg" alt="magnifier" />
+                  </button>
+                </form>
+              </li>
               <li class="navbar-menu__item">
                 <a href="#" class="navbar-menu__link">All Deals</a>
               </li>
@@ -766,7 +791,7 @@
                   />
                 </div>
                 Tel (business hours) : 269 1500<br />Tel (hotline) Monday -
-                Saturday:&nbsp;52-56-61-38 (08:00 am – 20:00 pm)<br />Tel
+                Saturday: 52&nbsp;-56-61-38 (08:00 am – 20:00 pm)<br />Tel
                 (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
               </li>
               <li class="footer__item footer__item_mb">
