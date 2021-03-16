@@ -1588,6 +1588,7 @@ button:active, button:focus {
 }
 
 .footer__icon-wrapper {
+  margin-left: 4px;
   min-width: 40px;
 }
 
@@ -1816,6 +1817,14 @@ button:active, button:focus {
   .card {
     width: 230px;
     height: 230px;
+  }
+  .footer-wrapper {
+    -ms-grid-columns: minmax(205px, 247px) 247px 247px 247px;
+        grid-template-columns: minmax(205px, 247px) 247px 247px 247px;
+    grid-column-gap: 0;
+  }
+  .footer__information {
+    margin-left: 57px;
   }
 }
 
@@ -2182,6 +2191,9 @@ button:active, button:focus {
     line-height: 38px;
     margin-bottom: 50px;
   }
+  .disclaimer__icons {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 660px) {
@@ -2246,7 +2258,7 @@ button:active, button:focus {
     margin-top: 12px;
   }
   .footer__form {
-    width: 280px;
+    width: 100%;
   }
   .footer__input {
     -webkit-flex-basis: 100%;
@@ -2321,7 +2333,10 @@ button:active, button:focus {
     margin-bottom: 15px;
   }
   .footer__disclaimer {
-    display: block;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .disclaimer {
     padding-top: 27px;
@@ -2379,6 +2394,9 @@ button:active, button:focus {
   }
   .subscribe__input {
     padding-left: 20px;
+  }
+  .footer__disclaimer {
+    display: block;
   }
 }
 
@@ -2450,12 +2468,31 @@ button:active, button:focus {
     line-height: 23px;
     margin-bottom: 36px;
   }
+  .activities__card:nth-child(3) {
+    margin-top: 10px;
+  }
   .card {
     width: 280px;
   }
   .packages__title {
     font-size: 20px;
     line-height: 23px;
+  }
+  .footer__form {
+    width: 280px;
+  }
+  .footer__logo {
+    width: 96px;
+    margin-top: -2px;
+  }
+  .footer__social-network {
+    margin-top: 2px;
+  }
+  .disclaimer__link {
+    margin-right: 6px;
+  }
+  .disclaimer__link:last-child {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
