@@ -2064,6 +2064,7 @@ button:active, button:focus {
   }
   .navbar-bottom--visible {
     display: block;
+    overflow-y: auto;
   }
   .navbar-menu {
     padding-top: 2px;

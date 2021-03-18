@@ -13,7 +13,6 @@ const hotelSlider = new Swiper('.hotel-slider', {
   autoplay: {
     delay: 6000,
   },
-  
 });
 
 const reviewsSlider = new Swiper('.reviews-slider', {
@@ -28,20 +27,12 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 const buttonMenu = document.querySelector('.menu-button');
 
 buttonMenu.addEventListener('click', () => {
-  document.querySelector('.navbar-bottom').classList.toggle('navbar-bottom--visible');
+  const navbarBottom = document.querySelector('.navbar-bottom');
+  navbarBottom.classList.toggle('navbar-bottom--visible');
+
+  if(navbarBottom.classList.contains('navbar-bottom--visible')) {
+    document.querySelector('body').style.overflow = 'hidden';
+  } else {
+    document.querySelector('body').style.overflow = 'auto';
+  }
 });
-
-// Параллакс эффект
-
-// $('.newsletter').parallax({imageSrc: 'img/newsletter-bg.jfif'}, {dataSpeed: 0.0});
-
-
-// addEventListener('keydown', function (event) {
-//   console.log(event)
-//   if(event.key === 'ArrowRight'){
-//     swiper.slideNext();
-//   }
-//   else if (event.key === 'ArrowLeft'){
-//     swiper.slidePrev()
-//   }
-// });

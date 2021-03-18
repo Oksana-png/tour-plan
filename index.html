@@ -791,7 +791,7 @@
                   />
                 </div>
                 Tel (business hours) : 269 1500<br />Tel (hotline) Monday -
-                Saturday: 52&nbsp;-56-61-38 (08:00 am – 20:00 pm)<br />Tel
+                Saturday: 52&nbsp;-56-61-38 (08:00 am – 20:00&nbsp;pm)<br />Tel
                 (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
               </li>
               <li class="footer__item footer__item_mb">
@@ -812,21 +812,24 @@
             <h3 class="footer__title footer__title_contacts">
               Send us a message
             </h3>
-            <form action="#" class="footer__form">
+            <form action="send.php" method="POST" class="footer__form">
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Your Full Name*"
+                name="name"
               />
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Phone Number*"
+                name="phone"
               />
               <textarea
                 class="footer__message"
                 cols="30"
                 placeholder="Message"
+                name="message"
               ></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
