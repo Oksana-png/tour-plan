@@ -727,6 +727,10 @@ button:active, button:focus {
   margin-right: 18px;
 }
 
+.hotel__form {
+  margin-bottom: 20px;
+}
+
 .swiper-container {
   margin: 0;
 }
@@ -938,6 +942,23 @@ button:active, button:focus {
   -webkit-border-radius: 10px;
           border-radius: 10px;
   overflow: hidden;
+}
+
+.button__prev {
+  display: block;
+  text-decoration: none;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 15px;
+  color: #fff;
+  background-color: #EC1F46;
+  padding: 17px 20px 18px 20px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: none;
+  width: 160px;
+  text-align: center;
 }
 
 .packages {
@@ -1518,6 +1539,10 @@ button:active, button:focus {
   width: auto;
   margin-top: 32px;
   height: 176px;
+}
+
+.footer__logo-img {
+  height: 100%;
 }
 
 .footer__information {
