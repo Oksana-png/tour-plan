@@ -16,7 +16,7 @@ if(isset($email)){
     //Формирование самого письма
     $titleLetter = "Подписка на рассылку - Best Tour plan";
     $bodyLetter = "
-    <h2>Новый запрос</h2>
+    <h2>New mailing request</h2>
     <b>Email:</b> $email<br>";
 
     $letter = new PHPMailer\PHPMailer\PHPMailer();

@@ -147,6 +147,9 @@
         min-width: 45px
   .disclaimer
     padding-top: 56px
+  .modal
+    &__dialog
+      padding: 33px 50px 33px 50px
 @media (max-width: 767px )
   body
     padding-top: 70px
@@ -314,6 +317,15 @@
     &__disclaimer
       display: flex
       justify-content: space-between
+  .modal
+    &__dialog
+      padding: 33px 30px 33px 30px
+    &__button
+      order: 1
+    &__info
+      margin-bottom: 10px
+    &__message
+      min-height: 100px
 @media ( max-width: 660px )
   .hotels
     grid-template-columns: repeat( 1, 1fr)
@@ -414,6 +426,10 @@
       margin-right: 9px
       &:last-child
         margin-right: 0
+  .modal
+    &__dialog
+      margin: auto
+      width: 70%
 @media ( max-width: 576px )
   .logo
     width: 99px
@@ -533,3 +549,14 @@
   .navbar
     &__search
       margin-left: 0
+  .modal
+    &__dialog
+      width: 85%
+    &__title
+      font-size: 16px
+    &__input
+      padding: 12px 0 12px 15px
+      margin-bottom: 15px
+    &__message
+      padding: 12px 0 12px 15px
+      margin-bottom: 15px
