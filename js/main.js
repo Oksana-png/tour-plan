@@ -56,6 +56,10 @@ $(document).ready(function() {
       }
 	});
 
+    if(modalDialog.hasClass('modal__dialog--visible')) {
+      $('body').css('overflow', 'hidden');
+    }
+
   };
 
   function closeModal(event) {
@@ -65,5 +69,7 @@ $(document).ready(function() {
 
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
+
+    $('body').css('overflow', 'auto');
   };
 });
