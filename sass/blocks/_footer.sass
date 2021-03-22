@@ -80,7 +80,6 @@
       margin: 0 44px 0 0
     &_contacts
       margin-bottom: 32px
-
   &__message
     flex-basis: 100%
     margin-bottom: 23px
@@ -89,8 +88,14 @@
     align-items: center
     justify-content: flex-end
   &__input
-    margin-bottom: 14px
-    flex-basis: 47%
+    width: 100%
+    &-group
+      position: relative
+      margin-bottom: 14px
+      flex-basis: 47%
+  &__tel
+    text-decoration: none
+    color: $footer-text-color
 .disclaimer
   padding-top: 94px
   &__icons

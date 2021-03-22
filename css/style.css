@@ -23,6 +23,10 @@ button:active, button:focus {
   outline: none;
 }
 
+input {
+  outline: none;
+}
+
 .input {
   padding: 18px 0 17px 23px;
   background-color: #fff;
@@ -148,6 +152,60 @@ button:active, button:focus {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+}
+
+.invalid {
+  color: #EC1F46;
+}
+
+label.invalid {
+  position: absolute;
+  top: -32px;
+  left: 10px;
+  font-size: 14px;
+  background-color: #d26060;
+  color: #fff;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+label.invalid::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: -5px;
+  background-color: #d26060;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+label.modal-invalid {
+  position: relative;
+  left: 8px;
+  top: 5px;
+  font-size: 12px;
+  background-color: #d26060;
+  color: #fff;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+label.modal-invalid::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: -5px;
+  background-color: #d26060;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -518,6 +576,10 @@ button:active, button:focus {
   outline: none;
 }
 
+input {
+  outline: none;
+}
+
 .input {
   padding: 18px 0 17px 23px;
   background-color: #fff;
@@ -643,6 +705,60 @@ button:active, button:focus {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+}
+
+.invalid {
+  color: #EC1F46;
+}
+
+label.invalid {
+  position: absolute;
+  top: -32px;
+  left: 10px;
+  font-size: 14px;
+  background-color: #d26060;
+  color: #fff;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+label.invalid::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: -5px;
+  background-color: #d26060;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+label.modal-invalid {
+  position: relative;
+  left: 8px;
+  top: 5px;
+  font-size: 12px;
+  background-color: #d26060;
+  color: #fff;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+label.modal-invalid::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: -5px;
+  background-color: #d26060;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .navbar {
@@ -1453,16 +1569,19 @@ button:active, button:focus {
   text-transform: uppercase;
 }
 
+.newsletter__subscribe {
+  position: relative;
+}
+
 .subscribe {
   position: relative;
   width: 350px;
   height: 55px;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  overflow: hidden;
 }
 
 .subscribe__input {
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1494,6 +1613,10 @@ button:active, button:focus {
 }
 
 .subscribe__button {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
   position: absolute;
   top: 0;
   right: 0;
@@ -1939,10 +2062,20 @@ button:active, button:focus {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
+  position: relative;
   margin-bottom: 14px;
   -webkit-flex-basis: 47%;
       -ms-flex-preferred-size: 47%;
           flex-basis: 47%;
+}
+
+.footer__tel {
+  text-decoration: none;
+  color: #BDBDBD;
 }
 
 .disclaimer {
@@ -2025,7 +2158,7 @@ button:active, button:focus {
 
 .modal__input {
   padding: 16px 0 16px 25px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   width: 100%;
 }
 
@@ -2034,7 +2167,11 @@ button:active, button:focus {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__close {
@@ -2043,6 +2180,24 @@ button:active, button:focus {
   right: 18px;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 @media (max-width: 1200px) {
@@ -2615,7 +2770,7 @@ button:active, button:focus {
   .footer__form {
     width: 100%;
   }
-  .footer__input {
+  .footer__input-group {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
@@ -2868,7 +3023,6 @@ button:active, button:focus {
   }
   .modal__input {
     padding: 12px 0 12px 15px;
-    margin-bottom: 15px;
   }
   .modal__message {
     padding: 12px 0 12px 15px;

@@ -72,4 +72,50 @@ $(document).ready(function() {
 
     $('body').css('overflow', 'auto');
   };
+
+  $('.form').each(function() {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "Не короче 2 букв"
+        },
+        email: {
+          required: "We need your email address",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+        phone: {
+          required: "Telephone required",
+        },
+      }
+    });
+  });
+
+
+  
+  $('.modal__form').each(function() {
+    $(this).validate({
+      errorClass: "modal-invalid",
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "At least 2 letters"
+        },
+        email: {
+          required: "We need your email address",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+        phone: {
+          required: "Telephone required",
+        },
+      }
+    });
+  });
+
+
+  $('.modal__input_tel').mask('+0 (000) 000-00-00');
+  $('.footer__input_tel').mask('+0 (000) 000-00-00');
+  
 });
+

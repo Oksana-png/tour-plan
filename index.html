@@ -488,12 +488,13 @@
         <form
           action="send.php"
           method="POST"
-          class="subscribe newsletter__subscribe"
+          class="form subscribe newsletter__subscribe"
         >
           <input
-            type="text"
+            type="email"
             class="subscribe__input"
             placeholder="Your email address"
+            required
             name="email"
           />
           <button class="subscribe__button">Send</button>
@@ -748,11 +749,23 @@
           <div class="footer__social-network">
             <div class="footer__title footer__title_inline">Social Network</div>
             <div class="footer__social-links">
-              <a href="#" class="footer__link"
+              <a
+                href="https://www.facebook.com"
+                class="footer__link"
+                target="_blank"
+                rel="nofollow nopener"
                 ><img src="img/facebook.svg" alt="icon: facebook" /></a
-              ><a href="#" class="footer__link"
+              ><a
+                href="https://www.youtube.com/"
+                class="footer__link"
+                target="_blank"
+                rel="nofollow nopener"
                 ><img src="img/youtube.svg" alt="icon: youtube" /></a
-              ><a href="#" class="footer__link"
+              ><a
+                href="https://www.instagram.com"
+                class="footer__link"
+                target="_blank"
+                rel="nofollow nopener"
                 ><img src="img/instagram.svg" alt="icon: instagram"
               /></a>
             </div>
@@ -801,9 +814,17 @@
                     alt="icon: phone"
                   />
                 </div>
-                Tel (business hours) : 269 1500<br />Tel (hotline) Monday -
-                Saturday: 52&nbsp;-56-61-38 (08:00 am – 20:00&nbsp;pm)<br />Tel
-                (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="footer__text-tel">
+                  Tel (business hours) :
+                  <a href="tel:269 1500" class="footer__tel">269 1500</a>
+                  <br />Tel (hotline) Monday - Saturday:
+                  <a href="52-56-61-38" class="footer__tel"
+                    >52&nbsp;-56-61-38</a
+                  >
+                  (08:00 am – 20:00&nbsp;pm) <br />Tel (hotline) Sunday:
+                  <a href="52-56-61-38" class="footer__tel">52-56-61-38</a>
+                  (08:00 am – 14:00 pm)
+                </div>
               </li>
               <li class="footer__item footer__item_mb">
                 <div class="footer__icon-wrapper">
@@ -824,18 +845,24 @@
               Send us a message
             </h3>
             <form action="send.php" method="POST" class="form footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                name="name"
-              />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                name="phone"
-              />
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  required
+                  name="name"
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input footer__input_tel"
+                  placeholder="Phone Number*"
+                  required
+                  name="phone"
+                />
+              </div>
               <textarea
                 class="message footer__message"
                 placeholder="Message"
@@ -867,18 +894,29 @@
           <img src="img/close.svg" alt="close" class="modal__close-img" />
         </a>
         <h3 class="modal__title">Booking</h3>
-        <form action="send.php" method="POST" class="form modal__form">
+        <form action="send.php" method="POST" class="modal__form">
           <input
             type="text"
             class="input modal__input"
             placeholder="Your Full Name*"
+            name="name"
+            required
+            minlength="2"
           />
           <input
-            type="text"
-            class="input modal__input"
+            type="tel"
+            class="input modal__input modal__input_tel"
             placeholder="Phone Number*"
+            name="phone"
+            required
           />
-          <input type="text" class="input modal__input" placeholder="Email*" />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Email*"
+            name="email"
+            required
+          />
           <textarea
             class="message modal__message"
             placeholder="Message"
@@ -890,9 +928,10 @@
     </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

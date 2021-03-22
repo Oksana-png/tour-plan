@@ -12,6 +12,8 @@ button
   cursor: pointer
 button:active, button:focus
   outline: none
+input
+  outline: none
 
 .input
   padding: 18px 0 17px 23px
@@ -56,3 +58,42 @@ button:active, button:focus
   align-items: center
   justify-content: space-between
   flex-wrap: wrap
+.invalid
+  color: $primery
+
+label.invalid
+  position: absolute
+  top: -32px
+  left: 10px
+  font-size: 14px
+  background-color: #d26060
+  color: #fff
+  padding: 5px 10px
+  border-radius: 5px
+  &::after
+    content: ''
+    position: absolute
+    left: 10px
+    bottom: -5px
+    background-color: #d26060
+    width: 10px
+    height: 10px
+    transform: rotate(45deg)
+label.modal-invalid
+  position: relative
+  left: 8px
+  top: 5px
+  font-size: 12px
+  background-color: #d26060
+  color: #fff
+  padding: 5px 10px
+  border-radius: 5px
+  &::after
+    content: ''
+    position: absolute
+    left: 10px
+    top: -5px
+    background-color: #d26060
+    width: 10px
+    height: 10px
+    transform: rotate(45deg)
