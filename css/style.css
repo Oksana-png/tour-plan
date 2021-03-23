@@ -183,6 +183,31 @@ label.invalid::after {
           transform: rotate(45deg);
 }
 
+label.invalid-modal {
+  position: absolute;
+  top: -20px;
+  left: 6px;
+  font-size: 14px;
+  background-color: #f35371;
+  color: #fff;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+label.invalid-modal::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  bottom: -5px;
+  background-color: #f35371;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -702,6 +727,31 @@ label.invalid::after {
   content: '';
   position: absolute;
   left: 15px;
+  bottom: -5px;
+  background-color: #f35371;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+label.invalid-modal {
+  position: absolute;
+  top: -20px;
+  left: 6px;
+  font-size: 14px;
+  background-color: #f35371;
+  color: #fff;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+label.invalid-modal::after {
+  content: '';
+  position: absolute;
+  left: 6px;
   bottom: -5px;
   background-color: #f35371;
   width: 10px;
@@ -2111,13 +2161,14 @@ label.invalid::after {
   width: 100%;
 }
 
-.modal__input_group {
+.modal__input-group {
   position: relative;
   width: 100%;
   margin-top: 15px;
 }
 
 .modal__message {
+  outline: none;
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
@@ -2155,102 +2206,89 @@ label.invalid::after {
           flex-wrap: wrap;
 }
 
-.navbar-menu__link {
-  position: relative;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.navbar-menu__link:before {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  background-color: #fff;
-  border-bottom: solid 1px #f0f0f0;
-  z-index: 100;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.navbar-menu__link:hover {
-  opacity: 0.8;
-}
-
-.navbar-menu__link:hover:before {
-  width: 100%;
-  opacity: 1;
-}
-
-.booking__button {
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.booking__button:hover {
-  background-color: #921f35;
-  color: #f5fafe;
-}
-
-.modal__button, .search__button, .subscribe__button, .footer__button {
-  -webkit-transition: 0.15s;
-  -o-transition: 0.15s;
-  transition: 0.15s;
-}
-
-.modal__button:hover, .search__button:hover, .subscribe__button:hover, .footer__button:hover {
-  background-color: #921f35;
-  color: #f5fafe;
-}
-
-.modal__input, .search__input, .subscribe__input, .footer__input {
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.modal__input:hover, .modal__input:focus, .search__input:hover, .search__input:focus, .subscribe__input:hover, .subscribe__input:focus, .footer__input:hover, .footer__input:focus {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#f3e7e9), color-stop(99%, #e3eeff), to(#e3eeff));
-  background-image: -webkit-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-  background-image: -o-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-}
-
-.modal__message, .search__message, .subscribe__message, .footer__message {
-  outline: none;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.modal__message:hover, .modal__message:focus, .search__message:hover, .search__message:focus, .subscribe__message:hover, .subscribe__message:focus, .footer__message:hover, .footer__message:focus {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#f3e7e9), color-stop(99%, #e3eeff), to(#e3eeff));
-  background-image: -webkit-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-  background-image: -o-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-}
-
-.packages__button, .card__button {
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.packages__button:hover, .card__button:hover {
-  background-color: #921f35;
-  color: #f5fafe;
-}
-
-.footer__link {
-  position: relative;
-}
-
-.footer__link:hover {
-  opacity: 0.8;
+@media (min-width: 992px) {
+  .navbar-menu__link {
+    position: relative;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .navbar-menu__link:before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    background-color: #fff;
+    border-bottom: solid 1px #f0f0f0;
+    z-index: 100;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .navbar-menu__link:hover {
+    opacity: 0.8;
+  }
+  .navbar-menu__link:hover:before {
+    width: 100%;
+    opacity: 1;
+  }
+  .booking__button {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .booking__button:hover {
+    background-color: #921f35;
+    color: #f5fafe;
+  }
+  .modal__button, .search__button, .subscribe__button, .footer__button {
+    -webkit-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s;
+  }
+  .modal__button:hover, .search__button:hover, .subscribe__button:hover, .footer__button:hover {
+    background-color: #921f35;
+    color: #f5fafe;
+  }
+  .modal__input, .search__input, .subscribe__input, .footer__input {
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .modal__input:hover, .modal__input:focus, .search__input:hover, .search__input:focus, .subscribe__input:hover, .subscribe__input:focus, .footer__input:hover, .footer__input:focus {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#f3e7e9), color-stop(99%, #e3eeff), to(#e3eeff));
+    background-image: -webkit-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-image: -o-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  }
+  .modal__message, .search__message, .subscribe__message, .footer__message {
+    outline: none;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .modal__message:hover, .modal__message:focus, .search__message:hover, .search__message:focus, .subscribe__message:hover, .subscribe__message:focus, .footer__message:hover, .footer__message:focus {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#f3e7e9), color-stop(99%, #e3eeff), to(#e3eeff));
+    background-image: -webkit-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-image: -o-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  }
+  .packages__button, .card__button {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .packages__button:hover, .card__button:hover {
+    background-color: #921f35;
+    color: #f5fafe;
+  }
+  .footer__link {
+    position: relative;
+  }
+  .footer__link:hover {
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: 1200px) {

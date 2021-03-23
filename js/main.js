@@ -47,6 +47,8 @@ $(document).ready(function() {
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
 
+    modalOverlay.on('click', closeModal);
+
     modalOverlay.addClass("modal__overlay--visible");
     modalDialog.addClass("modal__dialog--visible");
 
@@ -54,6 +56,7 @@ $(document).ready(function() {
       if(event.which == 27) {
         closeModal(event);
       }
+      
 	});
 
     if(modalDialog.hasClass('modal__dialog--visible')) {
@@ -73,27 +76,52 @@ $(document).ready(function() {
     $('body').css('overflow', 'auto');
   };
 
+  $('.modal__form').each(function() {
+    $(this).validate({
+      errorClass: "invalid-modal",
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "At least 2 letters",
+        },
+        email: {
+          required: "Your email address",
+          email: "Format: name@domain.ru"
+        },
+        phone: {
+          required: "Telephone required",
+          minlength: "At least 18 letters",
+        },
+      }
+    });
+  });
+
   $('.form').each(function() {
     $(this).validate({
       errorClass: "invalid",
       messages: {
         name: {
           required: "Please specify your name",
-          minlength: "At least 2 letters"
+          minlength: "At least 2 letters",
         },
         email: {
-          required: "We need your email address",
-          email: "Your email address must be in the format of name@domain.com"
+          required: "Your email address",
+          email: "Format: name@domain.ru"
         },
         phone: {
           required: "Telephone required",
+          minlength: "At least 18 letters",
         },
       }
     });
   });
 
+
   $('.modal__input_tel').mask('+0 (000) 000-00-00');
   $('.footer__input_tel').mask('+0 (000) 000-00-00');
-  
+
+  AOS.init({
+    disable: 'mobile',
+  });
 });
 

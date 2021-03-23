@@ -1,56 +1,57 @@
-.navbar
-  &-menu
+@media  ( min-width: 992px )
+  .navbar
+    &-menu
+      &__link
+        position: relative
+        transition: 0.3s
+        &:before
+          content: ''
+          position: absolute
+          bottom: -3px
+          left: 0
+          width: 0
+          background-color: #fff
+          border-bottom: solid 1px #f0f0f0
+          z-index: 100
+          transition: 0.3s
+        &:hover
+          opacity: 0.8
+          &:before
+            width: 100%
+            opacity: 1
+  .booking
+    &__button
+      transition: 0.3s
+      &:hover
+        background-color: #921f35
+        color: #f5fafe
+  .modal, .search, .subscribe, .footer
+    &__button
+      transition: 0.15s
+      &:hover
+        background-color: #921f35
+        color: #f5fafe
+    &__input
+      transition: 0.4s
+      &:hover, &:focus
+        background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)
+    &__message
+      outline: none
+      transition: 0.4s
+      &:hover, &:focus
+        background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)
+
+  // СТИЛИ ДЛЯ КНОПОК BOOK NOW 
+  .packages, .card
+    &__button
+      transition: 0.3s
+      &:hover
+        background-color: #921f35
+        color: #f5fafe
+
+  // СТИЛИ ДЛЯ ВСЕХ ССЫЛОК
+  .footer
     &__link
       position: relative
-      transition: 0.3s
-      &:before
-        content: ''
-        position: absolute
-        bottom: -3px
-        left: 0
-        width: 0
-        background-color: #fff
-        border-bottom: solid 1px #f0f0f0
-        z-index: 100
-        transition: 0.3s
       &:hover
         opacity: 0.8
-        &:before
-          width: 100%
-          opacity: 1
-.booking
-  &__button
-    transition: 0.3s
-    &:hover
-      background-color: #921f35
-      color: #f5fafe
-.modal, .search, .subscribe, .footer
-  &__button
-    transition: 0.15s
-    &:hover
-      background-color: #921f35
-      color: #f5fafe
-  &__input
-    transition: 0.4s
-    &:hover, &:focus
-      background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)
-  &__message
-    outline: none
-    transition: 0.4s
-    &:hover, &:focus
-      background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)
-
-// СТИЛИ ДЛЯ КНОПОК BOOK NOW 
-.packages, .card
-  &__button
-    transition: 0.3s
-    &:hover
-      background-color: #921f35
-      color: #f5fafe
-
-// СТИЛИ ДЛЯ ВСЕХ ССЫЛОК
-.footer
-  &__link
-    position: relative
-    &:hover
-      opacity: 0.8

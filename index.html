@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Nunito:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -200,7 +201,7 @@
           </div>
           <!-- Первая карточка с информацией -->
           <div class="hotel-right">
-            <div class="booking">
+            <div class="booking" data-aos="flip-left">
               <div class="booking-info">
                 <div class="booking__price">
                   <span class="booking__start">price starts as</span>
@@ -241,7 +242,7 @@
               </button>
             </div>
             <!-- /.booking -->
-            <div class="map">
+            <div class="map" data-aos="flip-left">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3563.4142651943253!2d60.105170581097774!3d57.92313650542514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1615377213835!5m2!1sru!2sru"
                 width="600"
@@ -261,7 +262,7 @@
       <div class="container">
         <h2 class="packages__title">Other Packages</h2>
         <div class="packages__grid hotels">
-          <div class="hotels-big">
+          <div class="hotels-big" data-aos="zoom-out-up">
             <div class="hotels__image hotels__image_big">
               <img
                 src="img/packages-1.jfif"
@@ -315,7 +316,7 @@
             <!-- /.hotels-info -->
           </div>
           <!-- /.hotels-dig -->
-          <div class="hotels-small">
+          <div class="hotels-small" data-aos="zoom-out-up">
             <div class="hotels-small__image">
               <img
                 src="img/packages-2.jfif"
@@ -353,7 +354,7 @@
           </div>
           <!-- /.hotels-small -->
 
-          <div class="hotels-small">
+          <div class="hotels-small" data-aos="zoom-out-up">
             <div class="hotels-small__image">
               <img
                 src="img/packages-3.jfif"
@@ -392,7 +393,7 @@
           </div>
           <!-- /.hotels-small -->
 
-          <div class="hotels-small">
+          <div class="hotels-small" data-aos="zoom-out-up">
             <div class="hotels-small__image">
               <img
                 src="img/packages-4.jfif"
@@ -431,7 +432,7 @@
           </div>
           <!-- /.hotels-small -->
 
-          <div class="hotels-small">
+          <div class="hotels-small" data-aos="zoom-out-up">
             <div class="hotels-small__image">
               <img
                 src="img/packages-5.jfif"
@@ -632,7 +633,7 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="fade-right">
             <img
               src="img/activiti-1.jpg"
               alt="The curious corner of chamarel"
@@ -645,7 +646,11 @@
             <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="150"
+          >
             <img
               src="img/activiti-2.jpg"
               alt="Gymkhana club golf course"
@@ -655,7 +660,11 @@
             <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
             <img
               src="img/activiti-3.jpg"
               alt="Tamarind falls hikingtrip - full day"
@@ -667,7 +676,11 @@
             <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="450"
+          >
             <img
               src="img/activiti-4.jpg"
               alt="The blue marine discovery quest"
@@ -852,6 +865,7 @@
                   placeholder="Your Full Name*"
                   required
                   name="name"
+                  minlength="2"
                 />
               </div>
               <div class="footer__input-group">
@@ -861,6 +875,7 @@
                   placeholder="Phone Number*"
                   required
                   name="phone"
+                  minlength="18"
                 />
               </div>
               <textarea
@@ -894,8 +909,8 @@
           <img src="img/close.svg" alt="close" class="modal__close-img" />
         </a>
         <h3 class="modal__title">Booking</h3>
-        <form action="send.php" method="POST" class="form modal__form">
-          <div class="modal__input_group">
+        <form action="send.php" method="POST" class="modal__form">
+          <div class="modal__input-group">
             <input
               type="text"
               class="input modal__input"
@@ -905,16 +920,17 @@
               minlength="2"
             />
           </div>
-          <div class="modal__input_group">
+          <div class="modal__input-group">
             <input
               type="tel"
               class="input modal__input modal__input_tel"
               placeholder="Phone Number*"
               name="phone"
               required
+              minlength="18"
             />
           </div>
-          <div class="modal__input_group">
+          <div class="modal__input-group">
             <input
               type="email"
               class="input modal__input"
@@ -938,6 +954,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
