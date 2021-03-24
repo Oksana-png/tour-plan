@@ -186,11 +186,21 @@
     line-height: 19px
     border: none
 .map
-  background-color: #000
-  width: 347px
-  height: 213px
-  border-radius: 10px
-  overflow: hidden
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  border: 0
+  &-wrap
+    background-image: url('../img/map.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: #000
+    width: 347px
+    height: 213px
+    border-radius: 10px
+    overflow: hidden
 .button
   &--prev
     display: block

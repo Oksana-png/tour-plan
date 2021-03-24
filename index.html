@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Nunito:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Best tour plan - Hotel Booking</title>
   </head>
   <body>
@@ -43,11 +43,7 @@
           </form>
 
           <div class="user navbar__user navbar__user--mobile--hidden">
-            <img
-              src="img/avatar.jfif"
-              alt="logo: Nathan"
-              class="user__avatar"
-            />
+            <img src="img/avatar.jpg" alt="logo: Nathan" class="user__avatar" />
             <span class="user__name">Nathan</span>
           </div>
           <button class="menu-button navbar-top__menu-button">
@@ -242,16 +238,7 @@
               </button>
             </div>
             <!-- /.booking -->
-            <div class="map" data-aos="flip-left">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3563.4142651943253!2d60.105170581097774!3d57.92313650542514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1615377213835!5m2!1sru!2sru"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
+            <div class="map-wrap" data-aos="flip-left"></div>
           </div>
         </div>
       </div>
@@ -308,7 +295,10 @@
                 <div class="packages-price__pricetag">$ 10,500</div>
                 <strong class="packages-price__sale">$ 8,500</strong>
               </div>
-              <button class="packages__button packages__button_big">
+              <button
+                class="packages__button packages__button_big"
+                data-toggle="modal"
+              >
                 Book Now
               </button>
               <div class="hotels__offer hotels__offer_big">Flash Offer</div>
@@ -347,7 +337,9 @@
                 <div class="packages-price__pricetag">$ 8,500</div>
                 <strong class="packages-price__sale">$ 3,000</strong>
               </div>
-              <button class="packages__button">Book Now</button>
+              <button class="packages__button" data-toggle="modal">
+                Book Now
+              </button>
               <div class="hotels__offer">Flash Offer</div>
             </div>
             <!-- /.hotels-info  -->
@@ -386,7 +378,9 @@
                 <div class="packages-price__pricetag">$ 10,500</div>
                 <strong class="packages-price__sale">$ 9,500</strong>
               </div>
-              <button class="packages__button">Book Now</button>
+              <button class="packages__button" data-toggle="modal">
+                Book Now
+              </button>
               <div class="hotels__offer">Flash Offer</div>
             </div>
             <!-- /.hotels-info  -->
@@ -425,7 +419,9 @@
                 <div class="packages-price__pricetag">$ 4,500</div>
                 <strong class="packages-price__sale">$ 2,500</strong>
               </div>
-              <button class="packages__button">Book Now</button>
+              <button class="packages__button" data-toggle="modal">
+                Book Now
+              </button>
               <div class="hotels__offer">Flash Offer</div>
             </div>
             <!-- /.hotels-info  -->
@@ -440,7 +436,6 @@
                 class="hotels__image"
               />
             </div>
-
             <div class="hotels-info">
               <h3 class="hotels__title">Hotel Five Star</h3>
               <div class="hotels__desciption">
@@ -464,7 +459,9 @@
                 <div class="packages-price__pricetag">$ 6,500</div>
                 <strong class="packages-price__sale">$ 3,500</strong>
               </div>
-              <button class="packages__button">Book Now</button>
+              <button class="packages__button" data-toggle="modal">
+                Book Now
+              </button>
               <div class="hotels__offer">Flash Offer</div>
             </div>
             <!-- /.hotels-info  -->
@@ -925,7 +922,7 @@
               type="tel"
               class="input modal__input modal__input_tel"
               placeholder="Phone Number*"
-              name="phone"
+              name="phoneModal"
               required
               minlength="18"
             />
@@ -935,12 +932,13 @@
               type="email"
               class="input modal__input"
               placeholder="Email*"
-              name="email"
+              name="emailModal"
               required
             />
           </div>
           <textarea
             class="message modal__message"
+            name="messageModal"
             placeholder="Message"
           ></textarea>
           <button class="button modal__button" type="submit">Send</button>

@@ -69,10 +69,10 @@ $(document).ready(function() {
     event.preventDefault();
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
-
+    
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
-
+    
     $('body').css('overflow', 'auto');
   };
 
@@ -87,7 +87,7 @@ $(document).ready(function() {
           required: "Your email address",
           email: "Format: name@domain.ru"
         },
-        phone: {
+        phoneModal: {
           required: "Telephone required",
           minlength: "At least 18 letters",
         },
@@ -107,9 +107,9 @@ $(document).ready(function() {
   $('.footer__form').validate({
       errorClass: "invalid-footer",
       messages: {
-        email: {
-          required: "Your email address",
-          email: "Format: name@domain.ru"
+        phone: {
+          required: "Telephone required",
+          minlength: "At least 18 letters",
         },
         name: {
           required: "Please specify your name",
@@ -124,5 +124,13 @@ $(document).ready(function() {
   AOS.init({
     disable: 'mobile',
   });
+
+  // Встраивание карты при наведении
+  const map = document.querySelector('.map-wrap');
+  map.addEventListener('mouseover',  () => {
+    map.insertAdjacentHTML('afterBegin', '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3563.4142651943253!2d60.105170581097774!3d57.92313650542514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1615377213835!5m2!1sru!2sru" allowfullscreen="" loading="lazy" class="map"></iframe>')
+  });
+
+
 });
 
