@@ -76,8 +76,7 @@ $(document).ready(function() {
     $('body').css('overflow', 'auto');
   };
 
-  $('.modal__form').each(function() {
-    $(this).validate({
+  $('.modal__form').validate({
       errorClass: "invalid-modal",
       messages: {
         name: {
@@ -94,28 +93,30 @@ $(document).ready(function() {
         },
       }
     });
-  });
 
-  $('.form').each(function() {
-    $(this).validate({
+  $('.form__newsletter').validate({
       errorClass: "invalid",
       messages: {
-        name: {
-          required: "Please specify your name",
-          minlength: "At least 2 letters",
-        },
         email: {
           required: "Your email address",
           email: "Format: name@domain.ru"
         },
-        phone: {
-          required: "Telephone required",
-          minlength: "At least 18 letters",
-        },
       }
     });
-  });
 
+  $('.footer__form').validate({
+      errorClass: "invalid-footer",
+      messages: {
+        email: {
+          required: "Your email address",
+          email: "Format: name@domain.ru"
+        },
+        name: {
+          required: "Please specify your name",
+          minlength: "At least 2 letters",
+        },
+      }
+  });
 
   $('.modal__input_tel').mask('+0 (000) 000-00-00');
   $('.footer__input_tel').mask('+0 (000) 000-00-00');

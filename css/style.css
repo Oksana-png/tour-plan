@@ -161,7 +161,7 @@ input {
 label.invalid {
   position: absolute;
   top: -20px;
-  left: 10px;
+  left: 15px;
   font-size: 14px;
   background-color: #f35371;
   color: #fff;
@@ -186,7 +186,7 @@ label.invalid::after {
 label.invalid-modal {
   position: absolute;
   top: -20px;
-  left: 6px;
+  left: 15px;
   font-size: 14px;
   background-color: #f35371;
   color: #fff;
@@ -196,6 +196,31 @@ label.invalid-modal {
 }
 
 label.invalid-modal::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  bottom: -5px;
+  background-color: #f35371;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+label.invalid-footer {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  font-size: 14px;
+  background-color: #f35371;
+  color: #fff;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+label.invalid-footer::after {
   content: '';
   position: absolute;
   left: 6px;
@@ -714,7 +739,7 @@ input {
 label.invalid {
   position: absolute;
   top: -20px;
-  left: 10px;
+  left: 15px;
   font-size: 14px;
   background-color: #f35371;
   color: #fff;
@@ -739,7 +764,7 @@ label.invalid::after {
 label.invalid-modal {
   position: absolute;
   top: -20px;
-  left: 6px;
+  left: 15px;
   font-size: 14px;
   background-color: #f35371;
   color: #fff;
@@ -749,6 +774,31 @@ label.invalid-modal {
 }
 
 label.invalid-modal::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  bottom: -5px;
+  background-color: #f35371;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+label.invalid-footer {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  font-size: 14px;
+  background-color: #f35371;
+  color: #fff;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+label.invalid-footer::after {
   content: '';
   position: absolute;
   left: 6px;
@@ -1515,7 +1565,7 @@ label.invalid-modal::after {
   position: relative;
   padding-top: 98px;
   padding-bottom: 87px;
-  background-image: url(../../img/newsletter-bg.jfif);
+  background-image: url(../../img/newsletter-bg.jpg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3003,6 +3053,9 @@ label.invalid-modal::after {
   .footer__disclaimer {
     display: block;
   }
+  label.invalid {
+    left: 3px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -3118,6 +3171,9 @@ label.invalid-modal::after {
   .modal__message {
     padding: 12px 0 12px 15px;
     margin-bottom: 15px;
+  }
+  label.invalid-modal {
+    left: 6px;
   }
 }
 
