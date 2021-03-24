@@ -83,7 +83,7 @@ $(document).ready(function() {
           required: "Please specify your name",
           minlength: "At least 2 letters",
         },
-        email: {
+        emailModal: {
           required: "Your email address",
           email: "Format: name@domain.ru"
         },
@@ -94,7 +94,7 @@ $(document).ready(function() {
       }
     });
 
-  $('.form__newsletter').validate({
+  $('.form-newsletter').validate({
       errorClass: "invalid",
       messages: {
         email: {

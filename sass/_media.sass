@@ -123,6 +123,8 @@
       height: 111px
       width: 95px
       grid-row: 1 / 2
+      &-img
+        width: 100%
     &__social
       &-network
         margin-left: -15px
@@ -148,7 +150,7 @@
       margin: 0
     &__icon
       &-wrapper
-        min-width: 45px
+        min-width: 39px
   .disclaimer
     padding-top: 56px
   .modal
@@ -502,7 +504,7 @@
     &-wrap
       height: 172px
   .reviews
-    padding-bottom: 12px
+    padding-bottom: 50px
     &__title
       width: 245px
       margin: auto
@@ -513,7 +515,7 @@
       &__text
         text-align: left
       &__item
-        max-height: 600px
+        max-height: 438px
   .newsletter
     &-wrapper
       max-width: 280px
@@ -541,6 +543,14 @@
       font-size: 20px
       line-height: 23px
   .footer
+    &__title
+      margin-bottom: 17px
+      &_categories
+        margin-bottom: 22px
+      &_contacts
+        margin-top: 13px
+      &_bt
+        margin-bottom: 22px
     &__form
       width: 280px
     &__logo
@@ -548,9 +558,17 @@
       margin-top: -2px
     &__social
       &-network
-        margin-top: 9px
+        margin-top: 11px
     &__categories
       margin-top: -7px
+    &__item
+      &-mb
+        margin-bottom: 21px
+    &__icon
+      &-wrapper
+        min-width: 45px
+        margin-left: 0px
+        margin-top: 6px
   .disclaimer
     &__link
       margin-right: 9px
@@ -576,6 +594,13 @@
   label.invalid
     &-modal
       left: 6px
+@media (max-width: 330px)
+  .reviews
+    &-slider
+      &__item
+        height: 438px
+        padding-right: 39px
+        padding-left: 43px
 
 @media screen and (max-height: 500px)
   .modal
